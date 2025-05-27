@@ -1,31 +1,35 @@
-🕵️ SaberSniff - A Python Network Packet Sniffer by UnknwnSaber
-SaberSniff is a powerful and lightweight network packet sniffer built using Python and Scapy. Designed for learning, diagnostics, and network analysis, it allows you to capture and inspect packets in real time with a clean, readable output.
+# ⚔️ SaberSniff — Python Packet Sniffer
 
-⚙️ Dependencies
-Python 3.x
+**SaberSniff** is a lightweight, terminal-based packet sniffer built with [Scapy](https://scapy.net/) and [Colorama](https://pypi.org/project/colorama/).  
+It shows real-time, color-coded IP packet information and automatically rotates logs hourly. Designed for simplicity, readability, and quick analysis.
 
-Scapy (pip install scapy)
+---
 
-python
-Copy code
-from scapy.all import sniff  
-from scapy.layers.inet import IP, TCP, UDP, ICMP  
-🔍 Features
-📡 Real-time packet sniffing on a specified network interface
+## 🚀 Features
 
-🔎 Supports filtering by protocols: IP, TCP, UDP, ICMP
+- 📡 **Real-time IP Packet Capture**
+- 🎨 **Colorized Output**:
+  - **TCP** → Light Green
+  - **UDP** → Light Cyan
+  - **ICMP** → Yellow
+  - **Unknown Protocols** → Magenta
+- 🧾 **Detailed Packet Info**:
+  - TCP/UDP ports
+  - ICMP type and code
+- 🕒 **Timestamps**:
+  - Shown for every packet and at startup
+- 🗃️ **Hourly Log Rotation**:
+  - Logs saved in `logs/` folder
+  - Filename format: `packets_YYYY-MM-DD_HH.log`
+- 🛑 **Graceful Shutdown**:
+  - Clean `Ctrl+C` exit with shutdown message
+- 💻 **Terminal-Friendly**:
+  - Minimal, readable, and easy to extend
 
-📁 Outputs detailed packet summaries for quick inspection
+---
 
-🧰 Easily customizable for deeper packet analysis or logging
+## 📦 Requirements
 
-🧼 Clean and minimal interface — ideal for scripting or terminal use
-
-🚨 Disclaimer
-SaberSniff is for educational and authorized use only.
-Do not use this tool to capture traffic on networks you don’t own or have explicit permission to analyze.
-
-🧠 Created by UnknwnSaber
-Pull requests, suggestions, and forks are welcome. Expand it, break it, rebuild it.
-
-Let me know if you'd like to include additional features like file logging, protocol stats, or GUI integration, and I can adjust the description accordingly.
+- Python 3.6+
+- [Scapy](https://scapy.net/)
+- [Colorama](https://pypi.org/project/colorama/)
