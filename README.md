@@ -1,35 +1,64 @@
-# ⚔️ SaberSniff — Python Packet Sniffer
+# SaberSniff
 
-**SaberSniff** is a lightweight, terminal-based packet sniffer built with [Scapy](https://scapy.net/) and [Colorama](https://pypi.org/project/colorama/).  
-It shows real-time, color-coded IP packet information and automatically rotates logs hourly. Designed for simplicity, readability, and quick analysis.
-
----
-
-## 🚀 Features
-
-- 📡 **Real-time IP Packet Capture**
-- 🎨 **Colorized Output**:
-  - **TCP** → Light Green
-  - **UDP** → Light Cyan
-  - **ICMP** → Yellow
-  - **Unknown Protocols** → Magenta
-- 🧾 **Detailed Packet Info**:
-  - TCP/UDP ports
-  - ICMP type and code
-- 🕒 **Timestamps**:
-  - Shown for every packet and at startup
-- 🗃️ **Hourly Log Rotation**:
-  - Logs saved in `logs/` folder
-  - Filename format: `packets_YYYY-MM-DD_HH.log`
-- 🛑 **Graceful Shutdown**:
-  - Clean `Ctrl+C` exit with shutdown message
-- 💻 **Terminal-Friendly**:
-  - Minimal, readable, and easy to extend
+A simple, cross-platform Python packet sniffer for capturing and displaying raw network packets in real time.  
+**SaberSniff** is designed for educational and diagnostic purposes, allowing you to inspect network traffic from your terminal with minimal setup.
 
 ---
 
-## 📦 Requirements
+## Table of Contents
 
-- Python 3.6+
-- [Scapy](https://scapy.net/)
-- [Colorama](https://pypi.org/project/colorama/)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Example Output](#example-output)
+- [Troubleshooting](#troubleshooting)
+- [Legal Disclaimer](#legal-disclaimer)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## Features
+
+- **Cross-platform:** Works on Windows, Linux, and macOS
+- **No dependencies:** Pure Python, no external libraries required
+- **Easy to use:** Run from Bash or CMD with a single command
+- **Real-time packet display:** Shows source/destination IPs and protocols
+
+---
+
+## Requirements
+
+- **Python 3.7+**
+- **Administrator/root privileges** (required for raw socket access)
+
+---
+
+## Installation
+
+1. **Clone this repository:**
+
+    ```
+    git clone https://github.com/UnknwnSaber/SaberSniff.git
+    cd SaberSniff
+    ```
+
+2. **(Optional) Create a virtual environment:**
+
+    ```
+    python3 -m venv venv
+    source venv/bin/activate    # On Windows: venv\Scripts\activate
+    ```
+
+3. **No dependencies to install!**  
+   SaberSniff uses only the Python standard library.
+
+---
+
+## Usage
+
+### Linux/macOS (Bash)
+
+> **You must run as root to access raw sockets:**
+
